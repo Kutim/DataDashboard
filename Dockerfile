@@ -3,7 +3,10 @@ FROM node:lts as build
 
 WORKDIR /app
 COPY ./ /app/
+# 设置 npm 使用的国内镜像
+RUN npm config set registry https://r.cnpmjs.org/
 RUN npm install
+# 对于 Angular CLI，使用国内镜像
 RUN npm run build
 
 # Stage 2: Serve app with nginx
