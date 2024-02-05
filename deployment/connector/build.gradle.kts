@@ -14,6 +14,13 @@ repositories {
 }
 
 dependencies {
+    // SLF4J API
+    implementation("org.slf4j:slf4j-api:1.7.36") // 使用你需要的版本
+    // Logback Classic Implementation
+    implementation("ch.qos.logback:logback-classic:1.4.12") // 使用你需要的版本
+
+
+
     implementation(libs.edc.api.core)
     implementation(libs.edc.api.observability)
     implementation(libs.edc.auth.spi)
@@ -26,8 +33,8 @@ dependencies {
     implementation(libs.edc.control.plane.api)
     implementation(libs.edc.control.plane.core)
     implementation(libs.edc.data.plane.api)
-    implementation(libs.edc.data.plane.aws.s3)
-    implementation(libs.edc.data.plane.azure.storage)
+//    implementation(libs.edc.data.plane.aws.s3)
+//    implementation(libs.edc.data.plane.azure.storage)
     implementation(libs.edc.data.plane.client)
     implementation(libs.edc.data.plane.core)
     implementation(libs.edc.data.plane.http)
@@ -46,13 +53,14 @@ dependencies {
     implementation(libs.edc.management.api)
     implementation(libs.edc.micrometer.core)
     implementation(libs.edc.monitor.jdk.logger)
-    implementation(libs.edc.provision.aws.s3)
+//    implementation(libs.edc.provision.aws.s3)
     implementation(libs.edc.runtime.metamodel)
     implementation(libs.edc.transfer.data.plane)
     implementation(libs.edc.transfer.process.api)
     implementation(libs.edc.transfer.pull.http.receiver)
     implementation(libs.edc.transfer.pull.http.dynamic.receiver)
     implementation(libs.edc.util)
+    implementation(libs.edc.validator.core)
 //    implementation(libs.edc.vault.azure)
     implementation(libs.edc.vault.filesystem)
 
