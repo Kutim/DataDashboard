@@ -22,6 +22,8 @@ services:
   consumer-connector:
     build: deployment/connector
     platform: ${DOCKER_PLATFORM:-linux/amd64}
+    depends_on:
+      - consumer-db
     ports:
       - "19191:9191" # connector default
       - "19192:9192" # connector control
@@ -41,6 +43,8 @@ services:
   provider-connector:
     build: deployment/connector
     platform: ${DOCKER_PLATFORM:-linux/amd64}
+    depends_on:
+      - provider-db
     ports:
       - "29191:9191" # connector default
       - "29192:9192" # connector control
@@ -56,3 +60,27 @@ services:
     volumes:
       - ./deployment/conf/provider-connector.config:/config
       - ./deployment/conf:/conf
+
+  consumer-db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: edc
+      POSTGRES_USER: edc
+      POSTGRES_DB: edc
+    ports:
+      - '54322:5432'
+    volumes:
+      - ./deployment/conf/consumer-connector.db:/docker-entrypoint-initdb.d
+  
+  provider-db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: edc
+      POSTGRES_USER: edc
+      POSTGRES_DB: edc
+    ports:
+      - '54321:5432'
+    volumes:
+      - ./deployment/conf/provider-connector.db:/docker-entrypoint-initdb.d
