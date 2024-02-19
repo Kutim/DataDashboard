@@ -5,12 +5,14 @@ plugins {
 }
 
 repositories {
-  maven { url = uri("https://maven.aliyun.com/repository/public/") }
+  mavenLocal()
+  maven { url = uri("https://repo1.maven.org/maven2/")}
+  maven { url = uri("https://repo.nju.edu.cn/repository/maven-public/")}
   maven { url = uri("https://maven.aliyun.com/repositories/jcenter") }
   maven { url = uri("https://maven.aliyun.com/repositories/google") }
   maven { url = uri("https://maven.aliyun.com/repositories/central") }
-  google()
   mavenCentral()
+  google()
 }
 
 dependencies {
@@ -32,7 +34,10 @@ dependencies {
     implementation(libs.edc.control.plane.api.client)
     implementation(libs.edc.control.plane.api)
     implementation(libs.edc.control.plane.core)
-    implementation(libs.edc.data.plane.api)
+    implementation(libs.edc.control.plane.spi)
+    implementation(libs.edc.control.plane.sql)
+
+  implementation(libs.edc.data.plane.api)
 //    implementation(libs.edc.data.plane.aws.s3)
 //    implementation(libs.edc.data.plane.azure.storage)
     implementation(libs.edc.data.plane.client)
@@ -55,6 +60,24 @@ dependencies {
     implementation(libs.edc.monitor.jdk.logger)
 //    implementation(libs.edc.provision.aws.s3)
     implementation(libs.edc.runtime.metamodel)
+
+    implementation("org.eclipse.edc:asset-index-sql:0.4.1")
+    implementation("org.eclipse.edc:contract-definition-store-sql:0.4.1")
+    implementation("org.eclipse.edc:contract-negotiation-store-sql:0.4.1")
+    implementation("org.eclipse.edc:control-plane-sql:0.4.1")
+    implementation("org.eclipse.edc:data-plane-instance-store-sql:0.4.1")
+    implementation("org.eclipse.edc:data-plane-store-sql:0.4.1")
+//    implementation("org.eclipse.edc:identity-hub-credentials-store-sql:0.4.1")
+    implementation("org.eclipse.edc:participant-store-sql:0.4.1")
+    implementation("org.eclipse.edc:policy-definition-store-sql:0.4.1")
+    implementation("org.eclipse.edc:policy-monitor-store-sql:0.4.1")
+    implementation("org.eclipse.edc:sql-core:0.4.1")
+    implementation("org.eclipse.edc:sql-lease:0.4.1")
+    implementation("org.eclipse.edc:sql-pool-apache-commons:0.4.1")
+    implementation("org.eclipse.edc:transaction-local:0.4.1")
+    implementation("org.eclipse.edc:transfer-process-store-sql:0.4.1")
+    implementation("org.eclipse.edc:transaction-datasource-spi:0.4.1")
+
     implementation(libs.edc.transfer.data.plane)
     implementation(libs.edc.transfer.process.api)
     implementation(libs.edc.transfer.pull.http.receiver)
@@ -74,10 +97,10 @@ dependencies {
     implementation(libs.okhttp.mockwebserver)
     implementation(libs.restAssured)
     implementation(libs.kafka.clients)
-    implementation(libs.opentelemetry)
-    implementation(libs.opentelemetry.annotations)
+//    implementation(libs.opentelemetry)
+//    implementation(libs.opentelemetry.annotations)
 
-
+    implementation(libs.postgres)
 
 
 
