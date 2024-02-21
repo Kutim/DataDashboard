@@ -35,7 +35,7 @@ services:
       EDC_KEYSTORE: /config/vault-keys.p12
       EDC_KEYSTORE_PASSWORD: 123456
       EDC_FS_CONFIG: /config/configuration.properties
-      JAVA_TOOL_OPTIONS: -Dlog4j.configuration=file:/conf/log4j.properties
+      JAVA_TOOL_OPTIONS: -Djava.util.logging.config.file=file:/conf/logging.properties
     volumes:
       - ./deployment/conf/consumer-connector.config:/config
       - ./deployment/conf:/conf
@@ -56,7 +56,7 @@ services:
       EDC_KEYSTORE: /config/vault-keys.p12
       EDC_KEYSTORE_PASSWORD: 123456
       EDC_FS_CONFIG: /config/configuration.properties
-      JAVA_TOOL_OPTIONS: -Dlog4j.configuration=file:/conf/log4j.properties
+      JAVA_TOOL_OPTIONS: -Djava.util.logging.config.file=file:/conf/logging.properties
     volumes:
       - ./deployment/conf/provider-connector.config:/config
       - ./deployment/conf:/conf
