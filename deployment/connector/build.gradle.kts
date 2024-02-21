@@ -65,7 +65,7 @@ dependencies {
     implementation(libs.edc.json.ld)
     implementation(libs.edc.management.api)
     implementation(libs.edc.micrometer.core)
-    implementation(libs.edc.monitor.jdk.logger)
+//    implementation(libs.edc.monitor.jdk.logger)
     implementation(libs.edc.participant.store.sql)
     implementation(libs.edc.policy.definition.store.sql)
     implementation(libs.edc.policy.monitor.store.sql)
