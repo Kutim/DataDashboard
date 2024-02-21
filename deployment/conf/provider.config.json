@@ -1,5 +1,5 @@
 {
-  "apiKey": "ApiKeyDefaultValue",
+  "apiKey": "123456",
   "managementApiUrl": "http://localhost:28080/management",
   "catalogUrl": "http://localhost:28080/management",
   "storageAccount": "company2assets",
