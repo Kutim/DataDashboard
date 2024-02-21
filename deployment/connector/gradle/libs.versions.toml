@@ -86,6 +86,7 @@ edc-junit = { module = "org.eclipse.edc:junit", version.ref = "edc" }
 edc-management-api = { module = "org.eclipse.edc:management-api", version.ref = "edc" }
 edc-micrometer-core = { module = "org.eclipse.edc:micrometer-core", version.ref = "edc" }
 edc-monitor-jdk-logger = { module = "org.eclipse.edc:monitor-jdk-logger", version.ref = "edc" }
+edc-oauth2-core = { module = "org.eclipse.edc:oauth2-core", version.ref = "edc" }
 edc-participant-store-sql = { module = "org.eclipse.edc:participant-store-sql", version.ref = "edc" }
 edc-policy-definition-store-sql = { module = "org.eclipse.edc:policy-definition-store-sql", version.ref = "edc" }
 edc-policy-monitor-store-sql = { module = "org.eclipse.edc:policy-monitor-store-sql", version.ref = "edc" }
