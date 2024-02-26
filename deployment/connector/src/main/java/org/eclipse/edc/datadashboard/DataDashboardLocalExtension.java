@@ -14,8 +14,13 @@
 
 package org.eclipse.edc.datadashboard;
 
+// 0.4.1
 //import org.eclipse.edc.catalog.spi.FederatedCacheNode;
 //import org.eclipse.edc.catalog.spi.FederatedCacheNodeDirectory;
+
+// 0.5.1
+import org.eclipse.edc.crawler.spi.TargetNode;
+import org.eclipse.edc.crawler.spi.TargetNodeDirectory;
 import org.eclipse.edc.connector.dataplane.selector.spi.instance.DataPlaneInstance;
 import org.eclipse.edc.connector.dataplane.selector.spi.store.DataPlaneInstanceStore;
 import org.eclipse.edc.runtime.metamodel.annotation.Extension;
@@ -31,8 +36,13 @@ public class DataDashboardLocalExtension implements ServiceExtension {
 
   public static final String NAME = "DataDashboard Local - please do not use in production";
 
+//  // 0.4.1
 //  @Inject
 //  private FederatedCacheNodeDirectory federatedCacheNodeDirectory;
+
+  // 0.5.1
+  @Inject
+  private TargetNodeDirectory targetNodeDirectory;
 
   @Inject
   private DataPlaneInstanceStore dataPlaneInstanceStore;
@@ -44,11 +54,15 @@ public class DataDashboardLocalExtension implements ServiceExtension {
 
   @Override
   public void initialize(ServiceExtensionContext context) {
-//    var nodeUrl = context.getSetting("edc.federated.node.url", null);
-//    if (nodeUrl != null) {
-//      context.getMonitor().info("Register federated node: %s".formatted(nodeUrl));
-//      federatedCacheNodeDirectory.insert(new FederatedCacheNode(UUID.randomUUID().toString(), nodeUrl, List.of("dataspace-protocol-http")));
-//    }
+    var nodeUrl = context.getSetting("edc.federated.node.url", null);
+    if (nodeUrl != null) {
+      context.getMonitor().info("Register federated node: %s".formatted(nodeUrl));
+      // 0.4.1
+      //      federatedCacheNodeDirectory.insert(new FederatedCacheNode(UUID.randomUUID().toString(), nodeUrl, List.of("dataspace-protocol-http")));
+
+      // 0.5.1
+      targetNodeDirectory.insert(new TargetNode(UUID.randomUUID().toString(), UUID.randomUUID().toString() ,nodeUrl, List.of("dataspace-protocol-http")));
+    }
   }
 
   @Override
