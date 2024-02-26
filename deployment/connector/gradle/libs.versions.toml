@@ -9,7 +9,7 @@ atomikos = "6.0.0"
 awaitility = "4.2.0"
 bouncyCastle-jdk18on = "1.77"
 cloudEvents = "2.5.0"
-edc = "0.4.1"
+edc = "0.5.1"
 failsafe = "3.3.2"
 h2 = "2.2.224"
 httpMockServer = "5.15.0"
@@ -50,6 +50,9 @@ edc-auth-spi = { module = "org.eclipse.edc:auth-spi", version.ref = "edc" }
 edc-auth-tokenbased = { module = "org.eclipse.edc:auth-tokenbased", version.ref = "edc" }
 edc-boot = { module = "org.eclipse.edc:boot", version.ref = "edc" }
 edc-build-plugin = { module = "org.eclipse.edc.edc-build:org.eclipse.edc.edc-build.gradle.plugin", version.ref = "edc" }
+edc-catalog-api = { module = "org.eclipse.edc:catalog-api", version.ref = "edc" }
+edc-catalog-core = { module = "org.eclipse.edc:catalog-core", version.ref = "edc" }
+edc-catalog-spi = { module = "org.eclipse.edc:catalog-spi", version.ref = "edc" }
 edc-configuration-filesystem = { module = "org.eclipse.edc:configuration-filesystem", version.ref = "edc" }
 edc-connector-core = { module = "org.eclipse.edc:connector-core", version.ref = "edc" }
 edc-contract-definition-store-sql = { module = "org.eclipse.edc:contract-definition-store-sql", version.ref = "edc" }
@@ -64,10 +67,12 @@ edc-data-plane-api = { module = "org.eclipse.edc:data-plane-api", version.ref = 
 edc-data-plane-aws-s3 = { module = "org.eclipse.edc:data-plane-aws-s3", version.ref = "edc" }
 edc-data-plane-azure-storage = { module = "org.eclipse.edc:data-plane-azure-storage", version.ref = "edc" }
 edc-data-plane-client = { module = "org.eclipse.edc:data-plane-client", version.ref = "edc" }
+edc-data-plane-control-api = { module = "org.eclipse.edc:data-plane-control-api", version.ref = "edc" }
 edc-data-plane-core = { module = "org.eclipse.edc:data-plane-core", version.ref = "edc" }
 edc-data-plane-http = { module = "org.eclipse.edc:data-plane-http", version.ref = "edc" }
 edc-data-plane-instance-store-sql = { module = "org.eclipse.edc:data-plane-instance-store-sql", version.ref = "edc" }
 edc-data-plane-kafka = { module = "org.eclipse.edc:data-plane-kafka", version.ref = "edc" }
+edc-data-plane-public-api = { module = "org.eclipse.edc:data-plane-public-api", version.ref = "edc" }
 edc-data-plane-selector-api = { module = "org.eclipse.edc:data-plane-selector-api", version.ref = "edc" }
 edc-data-plane-selector-client = { module = "org.eclipse.edc:data-plane-selector-client", version.ref = "edc" }
 edc-data-plane-selector-core = { module = "org.eclipse.edc:data-plane-selector-core", version.ref = "edc" }
@@ -75,6 +80,22 @@ edc-data-plane-spi = { module = "org.eclipse.edc:data-plane-spi", version.ref = 
 edc-data-plane-store-sql = { module = "org.eclipse.edc:data-plane-store-sql", version.ref = "edc" }
 edc-data-plane-util = { module = "org.eclipse.edc:data-plane-util", version.ref = "edc" }
 edc-dsp = { module = "org.eclipse.edc:dsp", version.ref = "edc" }
+edc-dsp-api-configuration = { module = "org.eclipse.edc:dsp-api-configuration", version.ref = "edc" }
+edc-dsp-catalog = { module = "org.eclipse.edc:dsp-catalog", version.ref = "edc" }
+edc-dsp-catalog-api = { module = "org.eclipse.edc:dsp-catalog-api", version.ref = "edc" }
+edc-dsp-catalog-http-dispatcher = { module = "org.eclipse.edc:dsp-catalog-http-dispatcher", version.ref = "edc" }
+edc-dsp-catalog-transform = { module = "org.eclipse.edc:dsp-catalog-transform", version.ref = "edc" }
+edc-dsp-http-core = { module = "org.eclipse.edc:dsp-http-core", version.ref = "edc" }
+edc-dsp-http-spi = { module = "org.eclipse.edc:dsp-http-spi", version.ref = "edc" }
+edc-dsp-negotiation = { module = "org.eclipse.edc:dsp-negotiation", version.ref = "edc" }
+edc-dsp-negotiation-api = { module = "org.eclipse.edc:dsp-negotiation-api", version.ref = "edc" }
+edc-dsp-negotiation-http-dispatcher = { module = "org.eclipse.edc:dsp-negotiation-http-dispatcher", version.ref = "edc" }
+edc-dsp-negotiation-transform = { module = "org.eclipse.edc:dsp-negotiation-transform", version.ref = "edc" }
+edc-dsp-spi = { module = "org.eclipse.edc:dsp-spi", version.ref = "edc" }
+edc-dsp-transfer-process = { module = "org.eclipse.edc:dsp-transfer-process", version.ref = "edc" }
+edc-dsp-transfer-process-api = { module = "org.eclipse.edc:dsp-transfer-process-api", version.ref = "edc" }
+edc-dsp-transfer-process-http-dispatcher = { module = "org.eclipse.edc:dsp-transfer-process-http-dispatcher", version.ref = "edc" }
+edc-dsp-transfer-process-transform = { module = "org.eclipse.edc:dsp-transfer-process-transform", version.ref = "edc" }
 edc-federated-catalog-api = { module = "org.eclipse.edc:federated-catalog-api", version.ref = "edc" }
 edc-federated-catalog-core = { module = "org.eclipse.edc:federated-catalog-core", version.ref = "edc" }
 edc-federated-catalog-spi = { module = "org.eclipse.edc:federated-catalog-spi", version.ref = "edc" }
