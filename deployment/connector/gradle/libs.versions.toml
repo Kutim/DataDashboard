@@ -103,6 +103,7 @@ edc-http = { module = "org.eclipse.edc:http", version.ref = "edc" }
 edc-iam-mock = { module = "org.eclipse.edc:iam-mock", version.ref = "edc" }
 edc-identity-did-core = { module = "org.eclipse.edc:identity-did-core", version.ref = "edc" }
 edc-identity-did-service = { module = "org.eclipse.edc:identity-did-service", version.ref = "edc" }
+edc-identity-did-spi = { module = "org.eclipse.edc:identity-did-spi", version.ref = "edc" }
 edc-identity-did-web = { module = "org.eclipse.edc:identity-did-web", version.ref = "edc" }
 edc-identity-hub-api = { module = "org.eclipse.edc:identity-hub-api", version.ref = "edc" }
 edc-identity-hub-credentials = { module = "org.eclipse.edc:identity-hub-credentials", version.ref = "edc" }
@@ -117,6 +118,15 @@ edc-identity-hub-participants = { module = "org.eclipse.edc:identity-hub-partici
 edc-identity-hub-spi = { module = "org.eclipse.edc:identity-hub-spi", version.ref = "edc" }
 edc-identity-hub-store-spi = { module = "org.eclipse.edc:identity-hub-store-spi", version.ref = "edc" }
 edc-identity-hub-versions = { module = "org.eclipse.edc:identity-hub-versions", version.ref = "edc" }
+edc-identity-hub-ext-api-did-mgmt-api = { module = "org.eclipse.edc:did-mgmt-api", version.ref = "edc" }
+edc-identity-hub-ext-api-identityhub-api-authentication = { module = "org.eclipse.edc:identityhub-api-authentication", version.ref = "edc" }
+edc-identity-hub-ext-api-identityhub-api-authorization = { module = "org.eclipse.edc:identityhub-api-authorization", version.ref = "edc" }
+edc-identity-hub-ext-api-identityhub-management-api-configuration = { module = "org.eclipse.edc:identityhub-management-api-configuration", version.ref = "edc" }
+edc-identity-hub-ext-api-keypair-mgmt-api = { module = "org.eclipse.edc:keypair-mgmt-api", version.ref = "edc" }
+edc-identity-hub-ext-api-participant-context-mgmt-api = { module = "org.eclipse.edc:participant-context-mgmt-api", version.ref = "edc" }
+edc-identity-hub-ext-api-verifiable-credential-mgmt-api = { module = "org.eclipse.edc:verifiable-credential-mgmt-api", version.ref = "edc" }
+edc-identity-hub-ext-did-local-did-publisher = { module = "org.eclipse.edc:local-did-publisher", version.ref = "edc" }
+
 edc-identity-trust = { module = "org.eclipse.edc:identity-trust", version.ref = "edc" }
 edc-identity-trust-core = { module = "org.eclipse.edc:identity-trust-core", version.ref = "edc" }
 edc-identity-trust-issuers-configuration = { module = "org.eclipse.edc:identity-trust-issuers-configuration", version.ref = "edc" }
